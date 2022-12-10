@@ -1,9 +1,10 @@
 <?php
 session_start();
-define("APP_PATH", (dirname((__FILE__))));
-
-include APP_PATH."/model/model.php";
-include APP_PATH."/controller/controller.php";
+if (!isset($_SESSION['id']) || !isset($_SESSION['name'])) {
+  header("location:/login.php");
+}
+include "/model.php";
+include "/controller.php";
 
 
 $user=user($conn);
@@ -96,7 +97,7 @@ $value=$user[0]['id'];
 
 							<!-- Chat users container start -->
 							<div class="chat-users-container">
-								
+
 
 								<!-- Users Container Start -->
 								<div class="users-container">
@@ -208,17 +209,17 @@ $value=$user[0]['id'];
 									</div>
 									<!-- User profile list items end -->
 
-									
 
-								
+
+
 								</div>
 							</div>
 							<!-- Sidebar profile container end -->
 
 						</div>
 
-						
-						
+
+
 
 						<!-- Settings Tab -->
 						<div class="tab-pane fade" id="tab-settings" role="tabpanel" aria-labelledby="settings-tab">

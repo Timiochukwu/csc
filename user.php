@@ -1,4 +1,6 @@
 <?php
+include "/model.php";
+include "/controller.php";
 $response=[];
 try{
 $statement=$conn->prepare("SELECT * FROM user WHERE id=:id");

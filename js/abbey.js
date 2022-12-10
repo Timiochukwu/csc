@@ -1,10 +1,3 @@
-// console.log(window.location.hash)
-function url(){
-	const url = this.value
-	console.log(url);
-	console.log("love")
-	console.log(event.target.data.set.id)
-}
 // throw.Error(window.location);
 window.addEventListener("load",function(e){
 
@@ -13,7 +6,7 @@ window.addEventListener("load",function(e){
 		var local_session = localStorage.getItem("mtk1");
 
 		var method="POST";
-    var url= "user"+window.location.search;
+    var url= "user.php"+window.location.search;
 		// var url= "backend/getUserRecord.php";
     var data= "user_id";
 		// var data= "user_id="+atob(local_session);
@@ -66,7 +59,7 @@ el.addEventListener("keydown",function(event){
 	var abbeytext = document.getElementById("abbeytext");
 	if(abbeytext.value !=="" ){
 	var method= "POST";
-	var url = "message"+window.location.search;
+	var url = "message.php"+window.location.search;
 	var data = abbeytext.value;
 
 	var json = JSON.stringify(data);
@@ -101,7 +94,7 @@ el.addEventListener("keydown",function(event){
 		var abbeytext = document.getElementById("abbeytext");
 		if(abbeytext.value !=="" ){
 		var method= "POST";
-		var url = "message"+window.location.search;
+		var url = "message.php"+window.location.search;
 		var data = abbeytext.value;
 
 		var json = JSON.stringify(data);
@@ -134,7 +127,7 @@ el.addEventListener("keydown",function(event){
 localStorage.get
 function messageout(){
   var method = "POST";
-  var url =  "getmessage"+window.location.search;
+  var url =  "getmessage.php"+window.location.search;
 
 	// console.table(window.location)
 	// throw Error
@@ -161,13 +154,13 @@ function messageout(){
        res.data.forEach(function(value, key){
 				 const id=value.id
 				 if (value.user_id == recipientId) {
-				 	html += '<li class="chat-left pl-5" ><div class="chat-avatar"><img src="img/user5.png" id="recimage" alt="Quick Chat Admin"><div class="chat-name">Kyle</div></div><div class="chat-text-wrapper"><div class="chat-text"><p>'+value.message+'</p><div class="chat-hour read">'+value.time_created+'<span>✓</span></div></div></div></li>'
+				 	html += '<li class="chat-left" ><div class="chat-avatar"><img src="img/user5.png" id="recimage" alt="Quick Chat Admin"><div class="chat-name">Kyle</div></div><div class="chat-text-wrapper"><div class="chat-text"><p>'+value.message+'</p><div class="chat-hour read">'+value.time_created+'<span>✓</span></div></div></div></li>'
 					// var testArray = [html]
 					// var testArray = testArray.concat(testArray)
 					// localStorage.setItem("message", JSON.stringify(testArray));
 
 				}else{
-					html += '<li class="chat-right pr-5"><div class="chat-text-wrapper"><div class="chat-text"><p>'+value.message+'</p><div class="chat-hour read">'+value.time_created+'<span>✓</span></div></div></div><div class="chat-avatar"><img src="img/user24.png" alt="Quick Chat Admin"><div class="chat-name">Amy</div></div></li>'
+					html += '<li class="chat-right"><div class="chat-text-wrapper"><div class="chat-text"><p>'+value.message+'</p><div class="chat-hour read">'+value.time_created+'<span>✓</span></div></div></div><div class="chat-avatar"><img src="img/user24.png" alt="Quick Chat Admin"><div class="chat-name">Amy</div></div></li>'
 					// var testArray = [html]
 					// var testArray = testArray.concat(testArray)
 					// localStorage.setItem("message", JSON.stringify(testArray));

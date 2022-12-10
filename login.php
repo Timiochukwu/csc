@@ -1,9 +1,8 @@
 <?php
 session_start();
-define("APP_PATH", (dirname((__FILE__))));
 
-include APP_PATH."/model/model.php";
-include APP_PATH."/controller/controller.php";
+include "/model.php";
+include "/controller.php"
 
 
 if(isset($_POST['submit'])){

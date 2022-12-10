@@ -1,6 +1,7 @@
 <?php
 session_start();
-
+include "/model.php";
+include "/controller.php";
 $response=[];
 try{
   $identifier=$_SESSION['id']+$_GET['id'];

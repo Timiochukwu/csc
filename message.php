@@ -1,6 +1,7 @@
 <?php
 session_start();
-
+include "/model.php";
+include "/controller.php";
 $json=file_get_contents("php://input");
 
 $data = json_decode($json,true);
