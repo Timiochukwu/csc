@@ -186,10 +186,6 @@ function messageout(){
  xhr.send(data);
 };
 window.setInterval(messageout,1000);
-
-function abbey(){
-	console.log("here")
-}
 // function top() {
 //     document.getElementById( 'top' ).scrollIntoView();
 // };
