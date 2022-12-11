@@ -23,7 +23,7 @@ console.log(image1)
           document.getElementById("chatname").innerHTML = ""+res.data.username+"";
 					// console.log(res.data.image);
 					// document.getElementById("recimage").src = "img/user5.png";
-          messageout();
+          // messageout();
 					scroll()
 
 			  }else{
@@ -72,7 +72,7 @@ el.addEventListener("keydown",function(event){
 			console.log(xhr.responseText);
 			var res =JSON.parse(xhr.responseText);
 			 if(res.success){
-				 messageout();
+				 // messageout();
 				 clearText();
 				 scroll()
 			 }else{
@@ -107,7 +107,7 @@ el.addEventListener("keydown",function(event){
 				console.log(xhr.responseText);
 				var res =JSON.parse(xhr.responseText);
 				 if(res.success){
-					 messageout();
+					 // messageout();
 					 clearText();
 					 scroll()
 				 }else{
@@ -124,7 +124,6 @@ el.addEventListener("keydown",function(event){
 	}
 	});
 
-localStorage.get
 function messageout(){
   var method = "POST";
   var url =  "getmessage.php"+window.location.search;
@@ -186,6 +185,11 @@ function messageout(){
  xhr.setRequestHeader("Content-type","application/x-www-form-urlencoded");
  xhr.send(data);
 };
+window.setInterval(messageout,1000);
+
+function abbey(){
+	console.log("here")
+}
 // function top() {
 //     document.getElementById( 'top' ).scrollIntoView();
 // };

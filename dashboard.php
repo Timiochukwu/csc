@@ -43,7 +43,7 @@ $value=$user[0]['id'];
 		************ -->
 
 	</head>
-	<body>
+	<body online="myfunc()">
 
 		<!-- Loading wrapper start -->
 		<div id="loading-wrapper">

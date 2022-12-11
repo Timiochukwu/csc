@@ -2,7 +2,7 @@
 session_start();
 
 include "/model.php";
-include "/controller.php"
+include "/controller.php";
 
 
 if(isset($_POST['submit'])){
