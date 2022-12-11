@@ -1,7 +1,7 @@
 <?php
 session_start();
 if (!isset($_SESSION['id']) || !isset($_SESSION['name'])) {
-  header("location:/login.php");
+  header("location:login.php");
 }
 include "/model.php";
 include "/controller.php";
